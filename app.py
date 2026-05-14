@@ -91,7 +91,7 @@ with tab2:
             
             posted = data[uid_report].get("posted_time", "00:00")
             try:
-            p_time = datetime.datetime.strptime(posted, "%H:%M").time()
+                p_time = datetime.datetime.strptime(posted, "%H:%M").time()
                 if datetime.time(4, 30) <= p_time <= datetime.time(9, 30):
                     points += 20
             except ValueError: pass
